@@ -47,7 +47,7 @@
 <!-- STEP 6: Add an H3 element inside the FORM tags that reads, "Subscribe to Newsletter" -->
 					<h3>Subscribe to Newsletter</h3>
 <!-- STEP 7a: Add a LABEL element for the email address -->
-					<label for="fnEmail">E-mail:</label><br />
+					<label for="emailAddress">E-mail:</label><br />
 <!-- STEP 7b: Add an INPUT element for the user to type their email address - set the type of INPUT to "email", add a name attribute that is set to "emailAddress", and an id attribute that is set to "emailAddress" -->
 <!-- STEP 7c: Add the 'for' attribute to the above LABEL element, and set the value to match the 'id' value of the INPUT element -->
 <!-- STEP 7d: Include the 'required' attribute on the above INPUT element so that users are forced to enter an email address before the form is submitted -->
