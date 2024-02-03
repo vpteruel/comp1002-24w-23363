@@ -24,7 +24,7 @@
 	$emailAddress = $_POST["emailAddress"];
 // STEP 12: Set the above variable to equal $_GET['emailAddress'], and end the line with a semicolon (;)
 // STEP 13: Use the PHP function, echo() to create an HTML paragraph element that confirms the user's email address - it should read, "Your email address, name@domain.com has been added to our list of subscribers." - use the $emailAddress variable and concatenate it inside the paragraph content -->
-	echo "Your email address, "+$emailAddress+" has been added to our list of subscribers.";
+	echo "<p>Your email address, " . $emailAddress . ", has been added to our list of subscribers.</p>";
 // STEP 14: Test your index.php and the subscribe.php pages by using the form
 // STEP 15: Check all your HTML and PHP code for formatting, and accuracy - then submit the URL to Lab 4 for credit
 ?>
