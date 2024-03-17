@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+html {
+	background-color: lightskyblue;
+/* STEP 1: Change the below font stack to begin with our preferred font, "Trebuchet MS", instead of Tahoma - you will need to add quotes to this font as it has a space in the name */
+	font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+/* STEP 2: Add a color property below to change the default text color to 'dimgrey' */
+	color: dimgrey;
+/* STEP 3a: Set the root type size in px on the HTML element rule - try 10px */
+	font-size: 10px;
+}
+
+body {
+	margin: 0 auto;
+	min-width: 768px;
+	max-width: 1024px;
+}
+
+/* STEP 3b: Yikes! The text is too small - set the font-size for content inside the HEADER using 'rem' (root em) - this value is a factor of the font-size of the root element (HTML) - try 2.2rem */
+header {
+	font-size: 2.2rem;
+	text-decoration: none;
+}
+
+/* STEP 10: Set a text-shadow on the rule below that is offset 2px to the left, 2px down, no blur, and color 'black' - check to see that your CSS is well-formatted, and you are all done the lab! */
+header h1,
+header h2 {
+	text-shadow: -2px 2px 0 black;
+	text-decoration: none;
+}
+
+/* STEP 8: Change the hyperlinks inside the page header so that they don't use text-decoration: underline anymore (the default) - set it to 'none' instead */
+header a {
+	text-decoration: none;
+}
+
+/* STEP 9: Create a new rule below that targets H2 elements contained by a HEADER, then set the text-transform property to 'uppercase' */
+header h2 {
+	text-transform: uppercase;
+}
+
+main {
+/* STEP 3c: Size up the content in the MAIN element part of the page as well - try 1.8rem */
+	font-size: 1.8rem;
+/* STEP 4: Adjust the line-height for better readability - set to 1.5 (no units - we will just use a factor) for all content inside the MAIN element - this will inherit */
+	line-height: 1.5;
+/* STEP 5: Justify text inside the MAIN element of the page so that is has a straight edge both on the left and right sides - text-align: justify (have a look at the result in the browser - we will add margins for space around the text next week */
+	text-align: justify;
+	/* Arrange the SECTION and the ASIDE elements side-by-side in columns (you don't have to do this, it's just a note explaining the below 3 lines of code) */
+	display: flex;
+	flex-direction: row;
+	background-color: white;
+}
+
+/* Make the SECTION column a bit wider than the ASIDE column (you don't have to do anything here, either) */
+main section {
+	width: 60%;
+}
+
+/* STEP 6a: Create a selector that targets any TIME element that is inside a SECTION, that is inside the MAIN element */
+
+/* STEP 6b: Set the font-style to 'italic' for the above TIME element - browse to the home page of the site in your browser to see the effect */
+main section time {
+	font-style: italic;
+}
+
+main aside {
+	width: 40%;
+}
+
+.new-feature {
+	padding-left: 25px;
+	background-image: url("../images/new.png");
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
+#emailAddress {
+	font-weight: bold;
+}
+
+[rel="external"] {
+	padding-right: 20px;
+	background-image: url("../images/extlink.png");
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+/* Thank you to 'pnx' at https://openclipart.org/detail/202731/external-link-icon for the very cool external link icon */
+
+main a {
+	text-decoration: none;
+	color: lightskyblue;
+	font-weight: bold;
+}
+
+main a:hover {
+	text-decoration: underline;
+	color: orange;
+}
+
+blockquote::first-letter {
+	font-size: 2em;
+}
+
+/* STEP 3d: Create a new rule here for the FOOTER element, setting the font-size to 1.6rem */
+footer {
+	font-size: 1.6rem;
+}
+
+footer p {
+	text-align: right;
+}
+
+/* STEP 7: Change the text-indent value below to something a bit more subtle */
+section > p {
+	text-indent: 1em; 
+}
+
+h1, h2, footer {
+	color: white;
+}
