@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <?php echo $word;?>
+    <?php echo '<p>Hello World</p>'; ?>
 </body>
 </html>
