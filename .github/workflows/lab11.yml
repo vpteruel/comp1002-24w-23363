@@ -24,3 +24,6 @@ jobs:
           **/.git*
           **/.git*/**
           **/node_modules/**
+          **/phpdocker/**
+          README.md
+          docker-compose.yml

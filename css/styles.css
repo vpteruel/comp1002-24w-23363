@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+html {
+	background-color: lightskyblue;
+	font-family: "Trebuchet MS", Verdana, sans-serif;
+	color: black;
+	font-size: 10px;
+}
+
+body {
+	margin: 0 auto;
+	min-width: 768px;
+	max-width: 1024px;
+}
+
+header {
+	font-size: 1.8rem;
+}
+header img {
+	float: left;
+}
+
+header h1,
+header h2 {
+	text-align: right;
+}
+
+header h1 {
+	margin-bottom: 0;
+}
+
+header h2 {
+	margin-top: 0;
+	text-transform: uppercase;
+}
+
+/* STEP 3a: Put colored borders around the NAV, UL, LI and A elements inside the HEADER */
+header nav {
+	/* border: 1px solid red; */
+}
+
+/* STEP 6: Remove the margin on the bottom of the UL below (set to 0) */
+header nav ul {
+	/* border: 3px dashed orange; */
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style-type: none;
+}
+
+header nav li {
+	/* border: 3px dotted green; */
+	display: inline-block;
+}
+
+/* STEP 8: Set all A elements (links) to display: block in the below rule */
+header nav a {
+	/* border: 3px solid hotpink; */
+	display: block;
+}
+
+/* STEP 3b: Position the parent LI to 'relative' so we can position the 2nd-level UL for drop menus */
+header nav ul li {
+	position: relative;
+}
+
+/* STEP 4b: Build a rule below to position the 2nd-level UL elements 'absolute', then hide them off the page with left: -9999px */
+header nav ul ul {
+	position: absolute;
+	left: -9999px;
+}
+
+/* STEP 7: Set a background-color of 'white' to the above 2nd-level UL */
+/* STEP 10a: In the above rule, set a fixed width of 15em for the 2nd-level UL, set the z-index to 1 so that it covers the image of the blocks on the blocks pages, and set a border of 3px solid black around it */
+/* STEP 10b: Get rid of (or comment out) all the colored borders that we applied to 'see' the box-model (you'll have to look around for them), and you are all done! */
+header nav ul ul {
+	background-color: white;
+	width: 15em;
+	z-index: 1;
+	/* border: 3px solid black; */
+	outline: 1px solid lightskyblue;
+}
+
+/* STEP 4a: Stack the 2nd-level LI element vertically (overriding the earlier LI rule with 'inline-block') by setting them to display: block */
+header nav ul ul li {
+	display: block;
+}
+
+/* STEP 5: Build a rule to put the 2nd-level UL back to 'left: auto' if the parent LI is hovered over (:hover) - you might need to refer to this week's Lesson files for this fancy selector - upload this CSS and test it by hovering over the 'About' link */
+header nav li:hover ul {
+	left: auto;
+}
+
+/* STEP 9: Style the links - LVFHA */
+/* STEP 9a: Set the unvisited A styles - 0.5em padding, no underlines, white background-color, and black text color */
+header nav a:link {
+	padding: 0.5em;
+	text-decoration: none;
+	background-color: white;
+	color: black;
+}
+
+/* STEP 9b: Set the visited styles - color: grey */
+header nav a:visited {
+	color: grey;
+}
+
+/* STEP 9c: Set the focus styles - background-color: orange */
+header nav a:focus {
+	background-color: orange;
+}
+
+/* STEP 9d: Set the hover styles - background-color: grey, and color: white */
+header nav a:hover {
+	background-color: grey;
+	color: white;
+}
+
+/* STEP 9e: Set the active styles - color: red and background-color: yellow */
+header nav a:active {
+	color: red;
+	background-color: yellow;
+}
+
+main {
+	font-size: 1.8rem;
+	line-height: 1.5;
+	text-align: justify;
+	background-color: white;
+	/* Arrange the SECTION and the ASIDE elements side-by-side in columns */
+	display: flex;
+	flex-direction: row;
+}
+
+main section {
+	width: 60%;
+	padding: 2em;
+}
+
+main section time {
+	font-style: italic;
+}
+
+main aside {
+	width: 40%;
+	padding: 2em 2em 2em 0;
+}
+
+aside img[alt$="block"] {
+	position: relative;
+	left: -2rem;
+}
+
+.new-feature {
+	padding-left: 25px;
+	background-image: url("../images/new.png");
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
+#emailAddress {
+	font-weight: bold;
+}
+
+[rel="external"] {
+	padding-right: 20px;
+	background-image: url("../images/extlink.png");
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+/* Thank you to 'pnx' at https://openclipart.org/detail/202731/external-link-icon for the very cool external link icon */
+
+main a {
+	text-decoration: none;
+	color: lightskyblue;
+	font-weight: bold;
+}
+
+main a:hover {
+	text-decoration: underline;
+	color: orange;
+}
+
+blockquote::first-letter {
+	font-size: 2em;
+}
+
+footer {
+	margin-top: 2rem;
+	font-size: 1.6rem;
+}
+
+footer p {
+	text-align: right;
+}
+
+section > p {
+	text-indent: 2em;
+}
+
+h1, h2, footer {
+	color: white;
+}
