@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - lab12
+      - assignment3
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -19,7 +19,7 @@ jobs:
         password: ${{ secrets.VPTERUEL_42WEB_IO_FTP_PASSWORD }}
         protocol: ftps
         port: 21
-        server-dir: /lab12.vpteruel.42web.io/htdocs/
+        server-dir: /assignment3.vpteruel.42web.io/htdocs/
         exclude: |
           **/.git*
           **/.git*/**
