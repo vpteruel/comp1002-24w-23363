@@ -1,0 +1,65 @@
+html,
+body,
+.container {
+    height: 100%;
+    margin: 0;
+    background-color: black;
+}
+
+.container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 600px 1fr;
+    grid-template-rows: 60px 40px 914px 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header header"
+        ". . ."
+        ". poster-box ."
+        ". . .";
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". header-links .";
+    background-color: white;
+    grid-area: header;
+}
+
+.header-links {
+    justify-self: center;
+    align-self: center;
+    grid-area: header-links;
+}
+
+.poster-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "poster-box-inner";
+    background-color: white;
+    grid-area: poster-box;
+}
+
+.poster-box-inner {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr 1fr 0.5fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". resume"
+        ". ."
+        ". title"
+        ". description";
+    background-image: url(../images/original-poster.jpg);
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    grid-area: poster-box-inner;
+}

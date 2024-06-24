@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'TheGoonies';
+    src: url(../fonts/the-goonies.ttf);
+}
+
+html,
+body,
+.container {
+    height: 100%;
+    margin: 0;
+    background-color: black;
+}
+
+.container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 600px 1fr;
+    grid-template-rows: 60px 40px 914px 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header header header"
+        ". . ."
+        ". poster-box ."
+        ". . .";
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". header-links .";
+    background-color: white;
+    grid-area: header;
+}
+
+.header-links {
+    justify-self: center;
+    align-self: center;
+    grid-area: header-links;
+}
+
+.poster-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "poster-box-inner";
+    background-color: white;
+    grid-area: poster-box;
+}
+
+.original-poster-box-inner {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr 1fr 0.5fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". resume"
+        ". ."
+        ". title"
+        ". description";
+    background-image: url(../images/original-poster.jpg);
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    grid-area: original-poster-box-inner;
+}
+
+.poster-box-inner {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr 1fr 0.5fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". resume"
+        ". ."
+        ". title"
+        ". description";
+    margin: 14px;
+    padding: 16px;
+    background-image: url(../images/poster-without-letters.jpg);
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    grid-area: poster-box-inner;
+}
+
+.resume {
+    justify-self: end;
+    align-self: start;
+    grid-area: resume;
+}
+
+.title {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 1fr 30px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "title1"
+        "title2"
+        "title3";
+    justify-self: end;
+    align-self: center;
+    grid-area: title;
+}
+
+.title1 {
+    justify-self: end;
+    align-self: end;
+    font-size: 12px;
+    grid-area: title1;
+}
+
+.title2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". .";
+    text-align: right;
+    grid-area: title2;
+}
+
+.title3 {
+    justify-self: end;
+    align-self: start;
+    font-size: 12px;
+    grid-area: title3;
+}
+
+.description {
+    justify-self: end;
+    align-self: end;
+    grid-area: description;
+}
+
+.resume-text {
+    text-align: right;
+    color: white;
+    font-size: small;
+    font-weight: bold;
+    grid-area: resume-text;
+}
+
+.title-text {
+    text-align: right;
+    color: black;
+    font-size: large;
+    grid-area: title-text;
+}
+
+.title-font {
+    font-family: 'TheGoonies';
+    color: rgb(159 1 16);
+    text-shadow: 3px 2px 0px rgba(0, 0, 0, 0.7);
+}
+
+.title-font1 {
+    font-size: 28px;
+}
+
+.title-font2 {
+    font-size: 68px;
+}
+
+.description-text {
+    text-align: right;
+    text-wrap: nowrap;
+    font-size: 12px;
+    grid-area: description-text;
+}
+
+.description-text-small {
+    font-size: 6px;
+}
